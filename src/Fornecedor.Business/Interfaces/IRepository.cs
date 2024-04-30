@@ -6,7 +6,6 @@ namespace Fornecedor.Business.Interfaces {
         
         Task Add(TEntity entity);
         Task<TEntity> GetById(Guid id);
-        Task<IEnumerable<TEntity>> GetByName(string name);
         Task<IEnumerable<TEntity>> GetAll();
         Task Update(TEntity entity);
         Task Delete(Guid id);
