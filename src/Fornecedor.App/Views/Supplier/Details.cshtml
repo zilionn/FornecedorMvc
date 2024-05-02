@@ -1,0 +1,15 @@
+﻿@model Fornecedor.App.ViewModels.SupplierViewModel
+
+@{
+    ViewData["Title"] = "Supplier Details";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <h4>@Model.Name</h4>
+    <p><strong>Address:</strong> @Model.Address</p>
+</div>
+
+<a href="@Url.Action("Edit", "Suppliers", new { id = Model.Id })">Edit</a> |
+<a href="@Url.Action("Index", "Suppliers")">Back to List</a>

@@ -1,6 +1,6 @@
-﻿using Fornecedor.App.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Fornecedor.App.Models;
 
 namespace Fornecedor.App.Controllers {
     public class HomeController : Controller {

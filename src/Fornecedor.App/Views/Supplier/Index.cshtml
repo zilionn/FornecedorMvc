@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Fornecedor.App.ViewModels.SupplierViewModel>
+
+@{
+    ViewData["Title"] = "Supplier Index";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var supplier in Model) {
+            <tr>
+                <td>@supplier.Id</td>
+                <td>@supplier.Name</td>
+                <td>@supplier.Address</td>
+                <td>
+                    <a href="@Url.Action("Details", "Suppliers", new { id = supplier.Id })">Details</a> |
+                    <a href="@Url.Action("Edit", "Suppliers", new { id = supplier.Id })">Edit</a> |
+                    <a href="@Url.Action("Delete", "Suppliers", new { id = supplier.Id })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create", "Suppliers")">Add New Supplier</a>
